@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand Colors — Navy + Gold */
+    --background: 210 20% 98%;
+    --foreground: 223 72% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 223 72% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 223 72% 10%;
+
+    --primary: 223 72% 14%;
+    --primary-foreground: 43 70% 88%;
+
+    --secondary: 210 20% 94%;
+    --secondary-foreground: 223 72% 14%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 220 15% 50%;
+
+    --accent: 43 80% 52%;
+    --accent-foreground: 223 72% 10%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 43 80% 52%;
+
+    --radius: 0.5rem;
+
+    /* BIZCON Custom Tokens */
+    --navy: 223 72% 12%;
+    --navy-light: 223 60% 20%;
+    --gold: 43 80% 52%;
+    --gold-light: 43 90% 66%;
+    --gold-muted: 43 50% 75%;
+    --section-alt: 220 30% 96%;
+    --section-blue: 220 40% 94%;
+    --section-dark: 223 72% 8%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(223, 72%, 9%) 0%, hsl(223, 60%, 18%) 60%, hsl(43, 40%, 20%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(43, 80%, 52%), hsl(35, 90%, 60%));
+    --gradient-section: linear-gradient(180deg, hsl(220, 30%, 97%) 0%, hsl(0, 0%, 100%) 100%);
+
+    /* Shadows */
+    --shadow-gold: 0 4px 30px hsl(43 80% 52% / 0.25);
+    --shadow-card: 0 4px 24px hsl(223 72% 12% / 0.08);
+    --shadow-elevated: 0 8px 48px hsl(223 72% 12% / 0.15);
+
+    /* Sidebar */
+    --sidebar-background: 223 72% 12%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 43 80% 52%;
+    --sidebar-primary-foreground: 223 72% 10%;
+    --sidebar-accent: 223 60% 20%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 223 50% 22%;
+    --sidebar-ring: 43 80% 52%;
+  }
+
+  .dark {
+    --background: 223 72% 8%;
+    --foreground: 210 30% 94%;
+
+    --card: 223 65% 12%;
+    --card-foreground: 210 30% 94%;
+
+    --popover: 223 65% 12%;
+    --popover-foreground: 210 30% 94%;
+
+    --primary: 43 80% 52%;
+    --primary-foreground: 223 72% 10%;
+
+    --secondary: 223 60% 18%;
+    --secondary-foreground: 210 30% 94%;
+
+    --muted: 223 55% 16%;
+    --muted-foreground: 215 20% 60%;
+
+    --accent: 43 80% 52%;
+    --accent-foreground: 223 72% 10%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 210 30% 94%;
+
+    --border: 223 50% 22%;
+    --input: 223 50% 22%;
+    --ring: 43 80% 52%;
+
+    --section-alt: 223 65% 11%;
+    --section-blue: 223 60% 14%;
+    --section-dark: 223 72% 6%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  /* Gold accent line */
+  .gold-line {
+    @apply block w-16 h-1 rounded-full;
+    background: var(--gradient-gold);
+  }
+
+  /* Section transitions */
+  .section-white { @apply bg-white; }
+  .section-alt { background-color: hsl(var(--section-alt)); }
+  .section-dark { background-color: hsl(var(--section-dark)); }
+
+  /* Stat card glow */
+  .stat-card {
+    @apply rounded-2xl p-5 backdrop-blur-md border;
+    background: hsl(0 0% 100% / 0.07);
+    border-color: hsl(43 80% 52% / 0.3);
+    box-shadow: 0 8px 32px hsl(43 80% 52% / 0.1);
+  }
+
+  /* Why attend card hover */
+  .attend-card {
+    @apply rounded-2xl border p-8 transition-all duration-300;
+    border-color: hsl(var(--border));
+    box-shadow: var(--shadow-card);
+  }
+  .attend-card:hover {
+    border-color: hsl(var(--gold));
+    box-shadow: var(--shadow-gold);
+    transform: translateY(-2px);
+  }
+
+  /* Video glow */
+  .video-glow {
+    box-shadow: 0 0 60px hsl(43 80% 52% / 0.2), 0 24px 64px hsl(223 72% 12% / 0.4);
+  }
+
+  /* Navbar glass */
+  .navbar-glass {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: hsl(223 72% 10% / 0.92);
+    border-bottom: 1px solid hsl(43 80% 52% / 0.15);
+  }
+
+  /* Animated underline */
+  .nav-link-item {
+    @apply relative text-sm font-medium transition-colors duration-200;
+  }
+  .nav-link-item::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-0 h-0.5 rounded-full transition-all duration-300;
+    background: hsl(var(--gold));
+  }
+  .nav-link-item:hover::after { @apply w-full; }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Shimmer skeleton */
+  .shimmer {
+    background: linear-gradient(90deg, hsl(var(--muted)) 25%, hsl(var(--secondary)) 50%, hsl(var(--muted)) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* Countdown boxes */
+  .countdown-box {
+    @apply flex flex-col items-center rounded-xl p-4 min-w-[80px];
+    background: hsl(0 0% 100% / 0.06);
+    border: 1px solid hsl(43 80% 52% / 0.25);
+    backdrop-filter: blur(8px);
+  }
+
+  /* Pulse dot */
+  .pulse-dot {
+    @apply w-2.5 h-2.5 rounded-full;
+    background: hsl(var(--gold));
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  @keyframes pulse-glow {
+    0%, 100% { opacity: 1; box-shadow: 0 0 0 0 hsl(43 80% 52% / 0.5); }
+    50% { opacity: 0.8; box-shadow: 0 0 0 6px hsl(43 80% 52% / 0); }
+  }
+}
+
+@layer utilities {
+  .text-gold { color: hsl(var(--gold)); }
+  .text-navy { color: hsl(var(--navy)); }
+  .bg-navy { background-color: hsl(var(--navy)); }
+  .bg-gold { background-color: hsl(var(--gold)); }
+  .border-gold { border-color: hsl(var(--gold)); }
+  .gradient-gold-text {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .gradient-hero-bg {
+    background: var(--gradient-hero);
+  }
+}
