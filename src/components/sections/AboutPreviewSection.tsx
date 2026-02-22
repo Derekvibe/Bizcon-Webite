@@ -25,7 +25,7 @@ export default function AboutPreviewSection() {
                 style={{ background: "hsl(223 72% 8% / 0.9)", border: "1px solid hsl(var(--gold)/0.25)" }}
               >
                 <p className="text-xs tracking-widest uppercase text-gold font-semibold mb-1">Conference Founder</p>
-                <p className="text-white font-bold text-lg" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <p className="text-white font-bold text-lg" style={{ fontFamily: "'Poppins', serif" }}>
                   John Doe
                 </p>
                 <p className="text-white/50 text-sm">Business Strategist & Growth Consultant</p>
@@ -38,7 +38,7 @@ export default function AboutPreviewSection() {
             <p className="text-xs tracking-[0.3em] uppercase text-gold font-semibold mb-3">About BIZCON</p>
             <h2
               className="text-4xl md:text-5xl font-bold text-navy mb-5"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "'Poppins', serif" }}
             >
               Born from Frustration.
               <br />

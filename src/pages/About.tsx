@@ -26,7 +26,7 @@ export default function About() {
             <p className="text-xs tracking-[0.3em] uppercase text-gold font-semibold mb-4">Our Story</p>
             <h1
               className="text-5xl md:text-6xl font-bold text-white mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "'Poppins', serif" }}
             >
               About BIZCON
             </h1>
@@ -44,7 +44,7 @@ export default function About() {
                 <p className="text-xs tracking-[0.3em] uppercase text-gold font-semibold">Our Mission</p>
                 <h2
                   className="text-3xl font-bold text-navy"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  style={{ fontFamily: "'Poppins', serif" }}
                 >
                   Equipping Nigerian Entrepreneurs with the Tools to Win
                 </h2>
@@ -93,7 +93,7 @@ export default function About() {
               <p className="text-xs tracking-[0.3em] uppercase text-gold font-semibold mb-3">Leadership</p>
               <h2
                 className="text-4xl font-bold text-navy"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "'Poppins', serif" }}
               >
                 Meet the Team
               </h2>
@@ -125,7 +125,7 @@ export default function About() {
                             style={{
                               background: "linear-gradient(135deg, hsl(var(--gold)/0.2), hsl(var(--gold)/0.05))",
                               color: "hsl(var(--gold))",
-                              fontFamily: "'Playfair Display', serif",
+                              fontFamily: "'Poppins', serif",
                             }}
                           >
                             {speaker.name[0]}
@@ -134,7 +134,7 @@ export default function About() {
                       </div>
 
                       <div className="flex-1">
-                        <p className="font-bold text-navy text-base" style={{ fontFamily: "'Playfair Display', serif" }}>
+                        <p className="font-bold text-navy text-base" style={{ fontFamily: "'Poppins', serif" }}>
                           {speaker.name}
                           {speaker.isHost && (
                             <span className="ml-2 text-xs px-2 py-0.5 rounded-full bg-gold/10 text-gold font-semibold">

@@ -28,7 +28,7 @@ export default function RegistrationSection() {
             <p className="text-xs tracking-[0.3em] uppercase text-gold font-semibold mb-3">Register Now</p>
             <h2
               className="text-4xl md:text-5xl font-bold text-navy mb-5"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "'Poppins', serif" }}
             >
               Reserve Your
               <br />
@@ -78,7 +78,7 @@ export default function RegistrationSection() {
                 >
                   <CheckCircle2 size={32} className="text-gold" />
                 </div>
-                <h3 className="text-2xl font-bold text-navy mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="text-2xl font-bold text-navy mb-3" style={{ fontFamily: "'Poppins', serif" }}>
                   You're Registered!
                 </h3>
                 <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
@@ -93,7 +93,7 @@ export default function RegistrationSection() {
               </div>
             ) : (
               <>
-                <h3 className="text-xl font-bold text-navy mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
+                <h3 className="text-xl font-bold text-navy mb-1" style={{ fontFamily: "'Poppins', serif" }}>
                   Registration Form
                 </h3>
                 <p className="text-muted-foreground text-sm mb-7">

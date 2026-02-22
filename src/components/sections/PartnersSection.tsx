@@ -16,7 +16,7 @@ export default function PartnersSection({ compact = false }: PartnersSectionProp
             </p>
             <h2
               className="text-3xl font-bold text-navy mb-4"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "'Poppins', serif" }}
             >
               Backed by Industry Leaders
             </h2>

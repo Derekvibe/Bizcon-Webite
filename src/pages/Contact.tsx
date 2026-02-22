@@ -37,7 +37,7 @@ export default function Contact() {
             <p className="text-xs tracking-[0.3em] uppercase text-gold font-semibold mb-4">Get in Touch</p>
             <h1
               className="text-5xl md:text-6xl font-bold text-white mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "'Poppins', serif" }}
             >
               Contact Us
             </h1>
@@ -122,7 +122,7 @@ export default function Contact() {
                   className="rounded-xl p-6"
                   style={{ background: "hsl(var(--section-alt))", border: "1px solid hsl(var(--border))" }}
                 >
-                  <p className="text-sm font-bold text-navy mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  <p className="text-sm font-bold text-navy mb-2" style={{ fontFamily: "'Poppins', serif" }}>
                     Want to sponsor BIZCON?
                   </p>
                   <p className="text-muted-foreground text-xs leading-relaxed mb-4">
@@ -150,7 +150,7 @@ export default function Contact() {
                     >
                       <CheckCircle2 size={32} className="text-gold" />
                     </div>
-                    <h3 className="text-2xl font-bold text-navy mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    <h3 className="text-2xl font-bold text-navy mb-3" style={{ fontFamily: "'Poppins', serif" }}>
                       Message Received!
                     </h3>
                     <p className="text-muted-foreground text-sm max-w-xs mx-auto">
@@ -159,7 +159,7 @@ export default function Contact() {
                   </div>
                 ) : (
                   <>
-                    <h3 className="text-xl font-bold text-navy mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
+                    <h3 className="text-xl font-bold text-navy mb-1" style={{ fontFamily: "'Poppins', serif" }}>
                       Send a Message
                     </h3>
                     <p className="text-muted-foreground text-sm mb-7">

@@ -34,7 +34,7 @@ export default function WalkAwaySection() {
               </p>
               <h3
                 className="text-3xl font-bold text-white mb-2 relative z-10"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "'Poppins', serif" }}
               >
                 Leave Different.
                 <br />
@@ -47,11 +47,11 @@ export default function WalkAwaySection() {
               {/* Bottom stat */}
               <div className="mt-10 pt-6 border-t border-white/10 flex gap-8 relative z-10">
                 <div>
-                  <p className="text-3xl font-bold gradient-gold-text" style={{ fontFamily: "'Playfair Display', serif" }}>97%</p>
+                  <p className="text-3xl font-bold gradient-gold-text" style={{ fontFamily: "'Poppins', serif" }}>97%</p>
                   <p className="text-white/40 text-xs mt-1">Attendee satisfaction</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold gradient-gold-text" style={{ fontFamily: "'Playfair Display', serif" }}>3x</p>
+                  <p className="text-3xl font-bold gradient-gold-text" style={{ fontFamily: "'Poppins', serif" }}>3x</p>
                   <p className="text-white/40 text-xs mt-1">Avg. revenue growth within 6 months</p>
                 </div>
               </div>
@@ -63,7 +63,7 @@ export default function WalkAwaySection() {
             <p className="text-xs tracking-[0.3em] uppercase text-gold font-semibold mb-3">The BIZCON Promise</p>
             <h2
               className="text-4xl font-bold text-navy mb-5"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "'Poppins', serif" }}
             >
               8 Things You'll Have
               <br />

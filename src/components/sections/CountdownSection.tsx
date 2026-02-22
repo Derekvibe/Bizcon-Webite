@@ -63,7 +63,7 @@ export default function CountdownSection() {
 
         <h2
           className="text-4xl md:text-5xl font-bold text-white mb-3"
-          style={{ fontFamily: "'Playfair Display', serif" }}
+          style={{ fontFamily: "'Poppins', serif" }}
         >
           The Clock Is Ticking
         </h2>
@@ -78,7 +78,7 @@ export default function CountdownSection() {
               <div className="countdown-box min-w-[80px] md:min-w-[100px]">
                 <span
                   className="text-4xl md:text-5xl font-bold text-white tabular-nums"
-                  style={{ fontFamily: "'Playfair Display', serif" }}
+                  style={{ fontFamily: "'Poppins', serif" }}
                 >
                   {String(unit.value).padStart(2, "0")}
                 </span>

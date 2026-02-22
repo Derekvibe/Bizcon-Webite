@@ -42,7 +42,7 @@ export default function WhyAttendSection() {
           <p className="text-xs tracking-[0.3em] uppercase text-gold font-semibold mb-3">Why BIZCON</p>
           <h2
             className="text-4xl md:text-5xl font-bold text-navy mb-5"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "'Poppins', serif" }}
           >
             6 Reasons Serious
             <br />Entrepreneurs Attend
@@ -71,13 +71,13 @@ export default function WhyAttendSection() {
               {/* Number */}
               <span
                 className="text-6xl font-bold text-gold/8 absolute top-6 right-6 select-none"
-                style={{ fontFamily: "'Playfair Display', serif", lineHeight: 1 }}
+                style={{ fontFamily: "'Poppins', serif", lineHeight: 1 }}
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
 
               <h3 className="text-lg font-bold text-navy mb-3 relative"
-                style={{ fontFamily: "'Playfair Display', serif" }}>
+                style={{ fontFamily: "'Poppins', serif" }}>
                 {reason.title}
               </h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{reason.description}</p>

@@ -31,7 +31,7 @@ export default function Events() {
             <p className="text-xs tracking-[0.3em] uppercase text-gold font-semibold mb-4">Our Track Record</p>
             <h1
               className="text-5xl md:text-6xl font-bold text-white mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}
+              style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               BIZCON Events
             </h1>
@@ -71,7 +71,7 @@ export default function Events() {
                       >
                         <span
                           className={`text-2xl font-bold ${isOpen ? "text-navy" : "text-gold"}`}
-                          style={{ fontFamily: "'Playfair Display', serif" }}
+                          style={{ fontFamily: "'Poppins', sans-serif" }}
                         >
                           {event.year}
                         </span>
@@ -81,7 +81,7 @@ export default function Events() {
                         <div className="flex items-center gap-2 flex-wrap mb-1">
                           <h3
                             className="text-xl font-bold text-navy"
-                            style={{ fontFamily: "'Playfair Display', serif" }}
+                            style={{ fontFamily: "'Poppins', sans-serif" }}
                           >
                             BIZCON {event.year}
                           </h3>

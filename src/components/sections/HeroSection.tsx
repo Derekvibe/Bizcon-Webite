@@ -48,7 +48,7 @@ export default function HeroSection() {
 
             {/* Headline */}
             <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6"
-              style={{ fontFamily: "'Playfair Display', serif" }}>
+              style={{ fontFamily: "'Poppins', serif" }}>
               Where Business
               <br />
               <span className="gradient-gold-text">Leaders</span> Are
@@ -109,7 +109,7 @@ export default function HeroSection() {
                   <stat.icon size={20} className="text-gold" />
                 </div>
                 <div>
-                  <p className="text-2xl font-bold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  <p className="text-2xl font-bold text-white" style={{ fontFamily: "'Poppins', serif" }}>
                     {stat.value}
                   </p>
                   <p className="text-white/50 text-xs">{stat.label}</p>

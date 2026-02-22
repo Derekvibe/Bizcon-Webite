@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -12,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ["'Playfair Display'", "Georgia", "serif"],
-        sans: ["'Inter'", "system-ui", "sans-serif"],
+        sans: ["'Poppins'", "system-ui", "sans-serif", "poppins"],
+        serif: ["'Poppins'", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -49,6 +54,7 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+
         navy: {
           DEFAULT: "hsl(var(--navy))",
           light: "hsl(var(--navy-light))",
@@ -58,6 +64,7 @@ export default {
           light: "hsl(var(--gold-light))",
           muted: "hsl(var(--gold-muted))",
         },
+
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -91,15 +98,15 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
-        "float": {
+        float: {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-8px)" },
         },
-        "shimmer": {
+        shimmer: {
           "0%": { backgroundPosition: "200% 0" },
           "100%": { backgroundPosition: "-200% 0" },
         },
-        "ticker": {
+        ticker: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
@@ -109,14 +116,17 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.6s ease-out forwards",
         "fade-in": "fade-in 0.5s ease-out forwards",
-        "float": "float 4s ease-in-out infinite",
-        "shimmer": "shimmer 1.5s infinite",
-        "ticker": "ticker 20s linear infinite",
+        float: "float 4s ease-in-out infinite",
+        shimmer: "shimmer 1.5s infinite",
+        ticker: "ticker 20s linear infinite",
       },
       backgroundImage: {
-        "gradient-gold": "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)))",
-        "gradient-hero": "linear-gradient(135deg, hsl(223, 72%, 9%) 0%, hsl(223, 60%, 18%) 60%, hsl(43, 40%, 20%) 100%)",
-        "gradient-card": "linear-gradient(135deg, hsl(0 0% 100% / 0.08), hsl(0 0% 100% / 0.02))",
+        "gradient-gold":
+          "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)))",
+        "gradient-hero":
+          "linear-gradient(135deg, hsl(223, 72%, 9%) 0%, hsl(223, 60%, 18%) 60%, hsl(43, 40%, 20%) 100%)",
+        "gradient-card":
+          "linear-gradient(135deg, hsl(0 0% 100% / 0.08), hsl(0 0% 100% / 0.02))",
       },
     },
   },

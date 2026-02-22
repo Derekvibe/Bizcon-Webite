@@ -36,7 +36,7 @@ export default function TestimonialsSection() {
           <p className="text-xs tracking-[0.3em] uppercase text-gold font-semibold mb-3">Social Proof</p>
           <h2
             className="text-4xl md:text-5xl font-bold text-white"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "'Poppins', serif" }}
           >
             What Past Attendees Say
           </h2>
@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
               {/* Quote mark */}
               <span
                 className="text-5xl gradient-gold-text leading-none mb-4 -mt-2"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "'Poppins', serif" }}
               >
                 "
               </span>

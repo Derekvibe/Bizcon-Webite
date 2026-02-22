@@ -1,106 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  :root {
-    /* Brand Colors — Navy + Gold */
-    --background: 210 20% 98%;
-    --foreground: 223 72% 10%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 223 72% 10%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 223 72% 10%;
-
-    --primary: 223 72% 14%;
-    --primary-foreground: 43 70% 88%;
-
-    --secondary: 210 20% 94%;
-    --secondary-foreground: 223 72% 14%;
-
-    --muted: 210 20% 94%;
-    --muted-foreground: 220 15% 50%;
-
-    --accent: 43 80% 52%;
-    --accent-foreground: 223 72% 10%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 214 20% 88%;
-    --input: 214 20% 88%;
-    --ring: 43 80% 52%;
-
-    --radius: 0.5rem;
-
-    /* BIZCON Custom Tokens */
-    --navy: 223 72% 12%;
-    --navy-light: 223 60% 20%;
-    --gold: 43 80% 52%;
-    --gold-light: 43 90% 66%;
-    --gold-muted: 43 50% 75%;
-    --section-alt: 220 30% 96%;
-    --section-blue: 220 40% 94%;
-    --section-dark: 223 72% 8%;
-
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(223, 72%, 9%) 0%, hsl(223, 60%, 18%) 60%, hsl(43, 40%, 20%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(43, 80%, 52%), hsl(35, 90%, 60%));
-    --gradient-section: linear-gradient(180deg, hsl(220, 30%, 97%) 0%, hsl(0, 0%, 100%) 100%);
-
-    /* Shadows */
-    --shadow-gold: 0 4px 30px hsl(43 80% 52% / 0.25);
-    --shadow-card: 0 4px 24px hsl(223 72% 12% / 0.08);
-    --shadow-elevated: 0 8px 48px hsl(223 72% 12% / 0.15);
-
-    /* Sidebar */
-    --sidebar-background: 223 72% 12%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 43 80% 52%;
-    --sidebar-primary-foreground: 223 72% 10%;
-    --sidebar-accent: 223 60% 20%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 223 50% 22%;
-    --sidebar-ring: 43 80% 52%;
-  }
-
-  .dark {
-    --background: 223 72% 8%;
-    --foreground: 210 30% 94%;
-
-    --card: 223 65% 12%;
-    --card-foreground: 210 30% 94%;
-
-    --popover: 223 65% 12%;
-    --popover-foreground: 210 30% 94%;
-
-    --primary: 43 80% 52%;
-    --primary-foreground: 223 72% 10%;
-
-    --secondary: 223 60% 18%;
-    --secondary-foreground: 210 30% 94%;
-
-    --muted: 223 55% 16%;
-    --muted-foreground: 215 20% 60%;
-
-    --accent: 43 80% 52%;
-    --accent-foreground: 223 72% 10%;
-
-    --destructive: 0 62% 40%;
-    --destructive-foreground: 210 30% 94%;
-
-    --border: 223 50% 22%;
-    --input: 223 50% 22%;
-    --ring: 43 80% 52%;
-
-    --section-alt: 223 65% 11%;
-    --section-blue: 223 60% 14%;
-    --section-dark: 223 72% 6%;
-  }
+    :root {
+        /* BRAND COLORS — BIZCON BLUE + RED + WHITE */
+        --background: 260 27% 98%;
+        /* white */
+        --foreground: 240 6% 9%;
+        /* near-black */
+    
+        --card: 0 0% 100%;
+        --card-foreground: 240 6% 9%;
+    
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 6% 9%;
+    
+        /* PRIMARY = Deep Blue */
+        --primary: 240 94% 34%;
+        --primary-foreground: 260 27% 98%;
+    
+        /* SECONDARY = Bright Blue variation */
+        --secondary: 239 83% 51%;
+        --secondary-foreground: 260 27% 98%;
+    
+        /* Muted Gray tones (portrait midtone) */
+        --muted: 270 10% 96%;
+        --muted-foreground: 270 10% 40%;
+    
+        /* ACCENT = Red (badge color) */
+        --accent: 355 78% 56%;
+        --accent-foreground: 260 27% 98%;
+    
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+    
+        /* Borders use light gray */
+        --border: 260 20% 92%;
+        --input: 260 20% 92%;
+        --ring: 355 78% 56%;
+    
+        --radius: 0.5rem;
+    
+        /* BIZCON CUSTOM TOKENS */
+        --navy: 240 94% 34%;
+        /* deep blue */
+        --navy-light: 239 83% 51%;
+        /* bright blue */
+        --gold: 355 78% 56%;
+        /* replaced with red because no gold in brand */
+        --gold-light: 355 78% 70%;
+        --gold-muted: 355 40% 85%;
+    
+        --section-alt: 260 27% 98%;
+        --section-blue: 239 83% 51%;
+        --section-dark: 240 6% 9%;
+    
+        /* GRADIENTS */
+        --gradient-hero: linear-gradient(135deg,
+            hsl(240 94% 20%) 0%,
+            hsl(239 83% 40%) 60%,
+            hsl(355 78% 40%) 100%);
+    
+        --gradient-gold: linear-gradient(135deg,
+            hsl(355 78% 56%),
+            hsl(355 70% 65%));
+    
+        --gradient-section: linear-gradient(180deg,
+            hsl(260 27% 98%) 0%,
+            hsl(0 0% 100%) 100%);
+    
+        /* SHADOWS */
+        --shadow-gold: 0 4px 30px hsl(355 78% 56% / 0.25);
+        --shadow-card: 0 4px 24px hsl(240 6% 9% / 0.08);
+        --shadow-elevated: 0 8px 48px hsl(240 6% 9% / 0.15);
+    
+        /* SIDEBAR */
+        --sidebar-background: 240 94% 20%;
+        --sidebar-foreground: 0 0% 95%;
+        --sidebar-primary: 355 78% 56%;
+        --sidebar-primary-foreground: 260 27% 98%;
+        --sidebar-accent: 239 83% 51%;
+        --sidebar-accent-foreground: 0 0% 95%;
+        --sidebar-border: 239 83% 40%;
+        --sidebar-ring: 355 78% 56%;
+      }
+    
+      .dark {
+        --background: 240 6% 9%;
+        --foreground: 260 27% 98%;
+    
+        --card: 240 6% 12%;
+        --card-foreground: 260 27% 98%;
+    
+        --popover: 240 6% 12%;
+        --popover-foreground: 260 27% 98%;
+    
+        --primary: 355 78% 56%;
+        --primary-foreground: 260 27% 98%;
+    
+        --secondary: 239 83% 51%;
+        --secondary-foreground: 260 27% 98%;
+    
+        --muted: 240 6% 20%;
+        --muted-foreground: 270 10% 60%;
+    
+        --accent: 355 78% 56%;
+        --accent-foreground: 260 27% 98%;
+    
+        --destructive: 0 62% 40%;
+        --destructive-foreground: 260 27% 98%;
+    
+        --border: 239 83% 40%;
+        --input: 239 83% 40%;
+        --ring: 355 78% 56%;
+    
+        --section-alt: 240 6% 12%;
+        --section-blue: 239 83% 24%;
+        --section-dark: 240 6% 6%;
+      }
 }
 
 @layer base {

@@ -15,7 +15,7 @@ export default function VideoSection() {
           </p>
           <h2
             className="text-4xl md:text-5xl font-bold text-white mb-4"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            style={{ fontFamily: "'Poppins', serif" }}
           >
             See What BIZCON
             <br />
@@ -65,7 +65,7 @@ export default function VideoSection() {
             <div key={s.label} className="text-center py-6">
               <p
                 className="text-3xl font-bold gradient-gold-text mb-1"
-                style={{ fontFamily: "'Playfair Display', serif" }}
+                style={{ fontFamily: "'Poppins', serif" }}
               >
                 {s.value}
               </p>
