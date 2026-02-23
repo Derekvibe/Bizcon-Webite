@@ -15,10 +15,10 @@ export interface SpeakerType {
 export const speakers: SpeakerType[] = [
   {
     id: "host-1",
-    name: "John Doe",
+    name: "Wilson Uwa",
     title: "Founder & Host, BIZCON",
-    image: "/images/speakers/host.jpg",
-    bio: "John Doe is a business strategist and growth consultant with over 10 years of experience helping SMEs scale profitably across West Africa. He founded BIZCON to bridge the knowledge gap between ambition and execution for Nigerian entrepreneurs.",
+    image: "https://i.postimg.cc/mD8QVhRV/IMG-0772-JPG.jpg",
+    bio: "Wilson Uwa is a business strategist and growth consultant with over 10 years of experience helping SMEs scale profitably across West Africa. He founded BIZCON to bridge the knowledge gap between ambition and execution for Nigerian entrepreneurs.",
     isHost: true,
     social: {
       linkedin: "https://linkedin.com/in/example",

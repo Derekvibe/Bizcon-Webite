@@ -7,13 +7,13 @@ export const siteConfig = {
   year: "2025",
   event: "Conference",
   currentEvent: {
-    date: "September 20, 2025",
-    dateISO: "2025-09-20T09:00:00",
+    date: "August 22, 2026",
+    dateISO: "2026-08-22T09:00:00",
     location: "Abakaliki, Ebonyi State, Nigeria",
     venue: "International Conference Center, Abakaliki",
     theme: "Empowering Business Growth",
-    seats: 500,
-    seatsLeft: 87,
+    seats: 200,
+    seatsLeft: 190,
   },
   contact: {
     email: "hello@bizcon.ng",

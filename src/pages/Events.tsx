@@ -83,11 +83,11 @@ export default function Events() {
                             className="text-xl font-bold text-navy"
                             style={{ fontFamily: "'Poppins', sans-serif" }}
                           >
-                            BIZCON {event.year}
+                            {event.id.includes("bizcon") ? "BIZCON" : "Alumni Hangout"} {event.year}
                           </h3>
                           {event.featured && (
                             <span className="text-xs px-2 py-0.5 rounded-full bg-gold/10 text-gold font-semibold border border-gold/20">
-                              Upcoming
+                              {event.date.includes("2026") ? "Upcoming" : "Previous Event"}
                             </span>
                           )}
                         </div>

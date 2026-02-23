@@ -40,7 +40,7 @@ export default function VideoSection() {
 
             {/* YouTube Autoplay Embed */}
             <iframe
-               src="https://www.youtube.com/embed/7TK8DaT_oHY?autoplay=1&mute=1&loop=1&playlist=7TK8DaT_oHY&controls=1&rel=0&modestbranding=1"
+               src="https://www.youtube.com/embed/KFTQEKXAooE?autoplay=1&mute=1&loop=1&playlist=KFTQEKXAooE&controls=1&rel=0&modestbranding=1"
               title="BIZCON 2025 Conference Highlight"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -51,15 +51,15 @@ export default function VideoSection() {
 
           {/* Caption */}
           <p className="text-center text-white/30 text-sm mt-5 italic">
-            Highlights from BIZCON — Nigeria's Premier Business Growth Conference
+            See What BIZCON Looks Like — WATCH THIS VIDEO
           </p>
         </div>
 
         {/* Stats bar below video */}
         <div className="max-w-3xl mx-auto mt-14 grid grid-cols-3 gap-px">
           {[
-            { value: "820+", label: "Total Alumni" },
-            { value: "2", label: "Editions Hosted" },
+            { value: "150+", label: "Total Alumni" },
+            { value: "1", label: "Editions Hosted" },
             { value: "100%", label: "Would Return" },
           ].map((s) => (
             <div key={s.label} className="text-center py-6">

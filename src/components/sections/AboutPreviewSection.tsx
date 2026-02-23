@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import speakerImg from "@/assets/speaker-host.jpg";
 
 export default function AboutPreviewSection() {
   return (
@@ -15,8 +14,8 @@ export default function AboutPreviewSection() {
             />
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src={speakerImg}
-                alt="John Doe — BIZCON Founder"
+                src="https://i.postimg.cc/mD8QVhRV/IMG-0772-JPG.jpg"
+                alt="Wilson Uwa — BIZCON Founder"
                 className="w-full h-[480px] object-cover object-top"
               />
               {/* Overlay card */}
@@ -24,11 +23,11 @@ export default function AboutPreviewSection() {
                 className="absolute bottom-6 left-6 right-6 rounded-xl p-5 backdrop-blur-sm"
                 style={{ background: "hsl(223 72% 8% / 0.9)", border: "1px solid hsl(var(--gold)/0.25)" }}
               >
-                <p className="text-xs tracking-widest uppercase text-gold font-semibold mb-1">Conference Founder</p>
+                <p className="text-xs tracking-widest uppercase text-gold font-semibold mb-1">BIZCON Founder</p>
                 <p className="text-white font-bold text-lg" style={{ fontFamily: "'Poppins', serif" }}>
-                  John Doe
+                  Wilson Uwa
                 </p>
-                <p className="text-white/50 text-sm">Business Strategist & Growth Consultant</p>
+                <p className="text-white/50 text-sm">Business Strategist & Brand Designer</p>
               </div>
             </div>
           </div>
