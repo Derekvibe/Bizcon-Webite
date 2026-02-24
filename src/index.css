@@ -239,6 +239,17 @@
     0%, 100% { opacity: 1; box-shadow: 0 0 0 0 hsl(43 80% 52% / 0.5); }
     50% { opacity: 0.8; box-shadow: 0 0 0 6px hsl(43 80% 52% / 0); }
   }
+
+    /* marquee animation */
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+  
+      100% {
+        transform: translateX(-50%);
+      }
+    }
 }
 
 @layer utilities {

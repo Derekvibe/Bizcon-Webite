@@ -31,27 +31,42 @@ export default function PartnersSection({ compact = false }: PartnersSectionProp
         )}
 
         {/* Partners grid — using text/logo placeholders since we don't have real logos */}
-        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
-          {partners.map((partner) => (
-            <div key={partner.id} className="group">
-              {partner.website ? (
-                <a
-                  href={partner.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 rounded-xl border border-border hover:border-gold/50 hover:shadow-md transition-all duration-200 text-muted-foreground hover:text-gold"
-                >
-                  <span className="font-bold text-sm tracking-wider">{partner.name}</span>
-                  <ExternalLink size={12} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
-              ) : (
-                <div className="flex items-center gap-2 px-6 py-3 rounded-xl border border-border text-muted-foreground">
-                  <span className="font-bold text-sm tracking-wider">{partner.name}</span>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
+        <div className="relative overflow-hidden py-10">
+  {/* Marquee inner wrapper */}
+  <div
+    className="flex items-center gap-12 animate-[marquee_25s_linear_infinite]"
+  >
+    {[...partners, ...partners].map((partner) => (
+      <div 
+        key={partner.id + "-logo"} 
+        className="group flex-shrink-0"
+      >
+        {partner.website ? (
+          <a
+            href={partner.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center p-4 rounded-xl border border-border hover:border-gold/50 hover:shadow-md transition-all duration-200"
+          >
+            <img
+              src={partner.logo}
+              alt={partner.name}
+              className="h-12 w-auto opacity-80 group-hover:opacity-100 transition"
+            />
+          </a>
+        ) : (
+          <div className="flex items-center justify-center p-4 rounded-xl border border-border">
+            <img
+              src={partner.logo}
+              alt={partner.name}
+              className="h-12 w-auto opacity-80"
+            />
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+</div>
 
         {!compact && (
           <p className="text-center text-muted-foreground/60 text-xs mt-10">

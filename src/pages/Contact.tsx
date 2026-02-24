@@ -42,7 +42,7 @@ export default function Contact() {
               Contact Us
             </h1>
             <p className="text-white/60 max-w-xl mx-auto text-lg">
-              Questions about BIZCON 2025? Sponsorship opportunities? We'd love to hear from you.
+              Questions about BIZCON 2026? Sponsorship opportunities? We'd love to hear from you.
             </p>
           </div>
         </section>
@@ -99,7 +99,6 @@ export default function Contact() {
                   <div className="flex gap-3">
                     {[
                       { Icon: Instagram, href: siteConfig.contact.instagram, label: "Instagram" },
-                      { Icon: Twitter, href: siteConfig.contact.twitter, label: "Twitter" },
                       { Icon: Linkedin, href: siteConfig.contact.linkedin, label: "LinkedIn" },
                       { Icon: Facebook, href: siteConfig.contact.facebook, label: "Facebook" },
                     ].map(({ Icon, href, label }) => (
