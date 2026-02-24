@@ -69,7 +69,7 @@ export default function About() {
                   style={{ background: "hsl(var(--section-alt))", border: "1px solid hsl(var(--border))" }}
                 >
                   {[
-                    { label: "Founded", value: "2024" },
+                    { label: "Founded", value: "2025" },
                     { label: "Location", value: "Abakaliki, Nigeria" },
                     { label: "Annual Event", value: "September" },
                     { label: "Focus", value: "Business Growth" },

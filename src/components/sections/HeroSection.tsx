@@ -4,8 +4,8 @@ import { siteConfig } from "@/data/config";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const stats = [
-  { icon: Users, value: "500+", label: "Entrepreneurs" },
-  { icon: Mic, value: "12+", label: "Expert Speakers" },
+  { icon: Users, value: "250+", label: "Entrepreneurs" },
+  { icon: Mic, value: "9+", label: "Expert Speakers" },
   { icon: Trophy, value: "1 Day", label: "Intensive Learning" },
 ];
 

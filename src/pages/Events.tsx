@@ -7,7 +7,7 @@ import eventImg2025 from "@/assets/event-2025.jpg";
 import eventImg2024 from "@/assets/event-2024.jpg";
 
 const eventImages: Record<string, string> = {
-  "bizcon-2025": eventImg2025,
+  "bizcon-2025": "https://postimg.cc/yktb13HN",
   "bizcon-2024": eventImg2024,
 };
 
@@ -145,15 +145,15 @@ export default function Events() {
                           </div>
 
                           {/* Right: Image gallery */}
-                          {img && (
-                            <div className="rounded-xl overflow-hidden">
+                          {event.images.map((img, i) => (
+                            <div key={i} className="rounded-xl overflow-hidden">
                               <img
                                 src={img}
-                                alt={`BIZCON ${event.year}`}
+                                alt={`${event.theme} image ${i + 1}`}
                                 className="w-full h-full object-cover max-h-64"
                               />
                             </div>
-                          )}
+                          ))}
                         </div>
                       </div>
                     )}

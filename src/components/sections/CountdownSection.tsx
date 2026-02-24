@@ -57,7 +57,7 @@ export default function CountdownSection() {
         <div className="flex items-center justify-center gap-2 mb-4">
           <span className="pulse-dot" />
           <p className="text-xs tracking-[0.3em] uppercase text-gold font-semibold">
-            BIZCON 2025 Countdown
+            BIZCON 2026 Countdown
           </p>
         </div>
 

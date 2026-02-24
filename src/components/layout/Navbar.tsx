@@ -62,16 +62,16 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <Link
-            to="/contact"
-            className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 hover:scale-105"
-            style={{
-              background: "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)))",
-              color: "hsl(var(--navy))",
+          <a
+                 href="#register"
+                className="px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 hover:scale-105"
+                style={{
+                  background: "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)))",
+                  color: "hsl(var(--navy))",
             }}
           >
             Register Now
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -98,16 +98,16 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
-          <Link
-            to="/contact"
-            className="mt-2 px-5 py-3 rounded-lg text-sm font-semibold text-center"
-            style={{
-              background: "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)))",
-              color: "hsl(var(--navy))",
-            }}
-          >
+          <a
+                 href="#register"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-base transition-all duration-200 hover:scale-105 hover:shadow-[0_8px_30px_hsl(43_80%_52%/0.4)] group"
+                style={{
+                  background: "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)))",
+                  color: "hsl(var(--navy))",
+                }}
+              >
             Register Now
-          </Link>
+          </a>
         </div>
       )}
     </header>
