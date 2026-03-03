@@ -13,7 +13,7 @@ export const siteConfig = {
     venue: "Ecumenical Center, Abakaliki",
     theme: "Mindset Shift",
     seats: 200,
-    seatsLeft: 200,
+    seatsLeft: 250,
   },
   contact: {
     email: "bizconabakaliki@gmail.com",

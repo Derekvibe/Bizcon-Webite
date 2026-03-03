@@ -35,10 +35,7 @@ export default function Navbar() {
               className="text-2xl font-bold tracking-widest gradient-gold-text"
               style={{ fontFamily: "'Playfair Display', serif" }}
             >
-              BIZCON
-            </span>
-            <span className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground text-white/60">
-              {siteConfig.event}
+              <img src="https://i.postimg.cc/xCWJ57M9/BIZCON-26-logo.png" alt="BIZCON Logo" className="h-10 w-auto" />
             </span>
           </div>
         </Link>

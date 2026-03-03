@@ -29,7 +29,7 @@ export const partners: PartnerType[] = [
   {
     id: "partner-4",
     name: "Eleemosy Empowerment Relief Foundation",
-    logo: "https://i.postimg.cc/gjWWWQzT/Eleemosy-logo.webp",
+    logo: "https://i.postimg.cc/mgF3GY2T/Eleemosy.png",
     tier: "silver",
   },
 ];

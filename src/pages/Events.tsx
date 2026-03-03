@@ -108,13 +108,12 @@ export default function Events() {
                     {/* Expanded content */}
                     {isOpen && (
                       <div className="border-t border-border px-7 pb-8 pt-6">
+                        <p className="text-muted-foreground text-sm leading-relaxed mb-6">{event.description}</p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                           {/* Left: Description */}
-                          <div>
-                            <p className="text-muted-foreground text-sm leading-relaxed mb-6">{event.description}</p>
-
-                            {/* Videos */}
-                            {event.videos.length > 0 && (
+                          {/* <div> */}
+                            
+                            {/* {event.videos.length > 0 && (
                               <div className="space-y-3">
                                 <p className="text-xs tracking-widest uppercase text-gold font-semibold">Highlights</p>
                                 {event.videos.map((v, i) => (
@@ -129,9 +128,9 @@ export default function Events() {
                                   </div>
                                 ))}
                               </div>
-                            )}
+                            )} */}
 
-                            {event.videos.length === 0 && event.featured && (
+                            {/* {event.videos.length === 0 && event.featured && (
                               <div
                                 className="rounded-xl p-4 flex items-center gap-3 text-sm"
                                 style={{ background: "hsl(var(--gold)/0.08)", border: "1px solid hsl(var(--gold)/0.25)" }}
@@ -141,10 +140,9 @@ export default function Events() {
                                   Highlight video will be published after the event.
                                 </span>
                               </div>
-                            )}
-                          </div>
+                            )} */}
+                          {/* </div> */}
 
-                          {/* Right: Image gallery */}
                           {event.images.map((img, i) => (
                             <div key={i} className="rounded-xl overflow-hidden">
                               <img
