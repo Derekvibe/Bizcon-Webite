@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Calendar, MapPin, ArrowRight, Users, Mic, Trophy } from "lucide-react";
 import { siteConfig } from "@/data/config";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const stats = [
   { icon: Users, value: "250+", label: "Entrepreneurs" },
@@ -19,7 +18,7 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 opacity-25"
         style={{
-          backgroundImage: `url(${heroBg})`,
+          backgroundImage: `url(https://i.postimg.cc/zXtBtPsb/hero-bg.jpg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
