@@ -19,11 +19,8 @@ export default function Footer() {
                 className="text-3xl font-bold tracking-widest gradient-gold-text"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
-                BIZCON
+                <img src="https://i.postimg.cc/xCWJ57M9/BIZCON-26-logo.png" alt="BIZCON Logo" className="h-10 w-auto" />
               </span>
-              <p className="text-xs tracking-[0.25em] uppercase text-white/40 mt-0.5">
-                Business & Success Growth Conference
-              </p>
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-sm mt-4">
               Empowering entrepreneurs, founders, and business managers with practical strategies to scale sustainably. Join thousands of leaders who've transformed their businesses.
@@ -32,10 +29,6 @@ export default function Footer() {
               <a href={siteConfig.contact.instagram} target="_blank" rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full flex items-center justify-center border border-white/20 hover:border-gold hover:text-gold transition-colors">
                 <Instagram size={16} />
-              </a>
-              <a href={siteConfig.contact.twitter} target="_blank" rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full flex items-center justify-center border border-white/20 hover:border-gold hover:text-gold transition-colors">
-                <Twitter size={16} />
               </a>
               <a href={siteConfig.contact.linkedin} target="_blank" rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full flex items-center justify-center border border-white/20 hover:border-gold hover:text-gold transition-colors">
