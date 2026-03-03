@@ -73,7 +73,7 @@ export default function About() {
                     { label: "Location", value: "Abakaliki, Nigeria" },
                     { label: "Annual Event", value: "September" },
                     { label: "Focus", value: "Business Growth" },
-                    { label: "Total Attendees", value: "820+" },
+                    { label: "Total Attendees", value: "250+" },
                   ].map((item) => (
                     <div key={item.label} className="flex justify-between items-center border-b border-border pb-4 last:border-0 last:pb-0">
                       <span className="text-xs tracking-wider uppercase text-muted-foreground font-semibold">{item.label}</span>
@@ -103,7 +103,7 @@ export default function About() {
             <div className="max-w-4xl mx-auto space-y-4">
               {speakers.map((speaker) => {
                 const isOpen = expanded === speaker.id;
-                const imgSrc = speaker.isHost ? speakerImg : null;
+                const imgSrc = speaker.image ? speaker.image : null;
 
                 return (
                   <div
