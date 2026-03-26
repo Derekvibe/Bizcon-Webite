@@ -12,7 +12,7 @@ export const siteConfig = {
     location: "Abakaliki, Ebonyi State, Nigeria",
     venue: "Ecumenical Center, Abakaliki",
     theme: "Mindset Shift",
-    seats: 200,
+    seats: 250,
     seatsLeft: 250,
   },
   contact: {
@@ -23,10 +23,22 @@ export const siteConfig = {
     linkedin: "https://linkedin.com/company/bizcon-ng",
     facebook: "https://www.facebook.com/share/1DYrn2wtfU/?mibextid=wwXIfr",
   },
-  navigation: [
+    navigation: [
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Events", href: "/events" },
     { label: "Contact", href: "/contact" },
   ],
+  pricing: {
+    regular: {
+      price: 15000,
+      label: "Regular",
+      description: "Standard access to BIZCON 2026.",
+    },
+    vip: {
+      price: 50000,
+      label: "VIP",
+      description: "Premium access with exclusive perks.",
+    },
+  },
 };

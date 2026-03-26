@@ -8,6 +8,7 @@ import AboutPreviewSection from "@/components/sections/AboutPreviewSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import PartnersSection from "@/components/sections/PartnersSection";
 import CountdownSection from "@/components/sections/CountdownSection";
+import PricingSection from "@/components/sections/PricingSection";
 import RegistrationSection from "@/components/sections/RegistrationSection";
 
 const Index = () => {
@@ -23,6 +24,7 @@ const Index = () => {
         <TestimonialsSection />
         <PartnersSection />
         <CountdownSection />
+        <PricingSection />
         <RegistrationSection />
       </main>
       <Footer />
