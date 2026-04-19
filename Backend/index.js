@@ -235,6 +235,55 @@ app.post(
     }
   },
 );
+// ─── ROUTE 5: Tix Africa Webhook ────────────────────────────────────────────────
+// Tix Africa will call this when a ticket purchase is complete.
+// Add this URL (e.g., https://your-backend.com/api/tix/webhook) to your Tix Dashboard Webhook settings.
+app.post("/api/tix/webhook", async (req, res) => {
+  try {
+    const payload = req.body;
+    console.log("Tix Webhook Received:", JSON.stringify(payload, null, 2));
+
+    // Robust extraction: Since Tix Africa payload isn't strictly public, we check common object paths
+    const customerName = 
+      payload?.data?.customer?.name || payload?.customer?.name || 
+      payload?.data?.buyer?.name || payload?.buyer?.name || 
+      payload?.name || 
+      (payload?.data?.first_name ? `${payload?.data?.first_name} ${payload?.data?.last_name || ''}`.trim() : "Tix Attendee");
+      
+    const customerEmail = 
+      payload?.data?.customer?.email || payload?.customer?.email || 
+      payload?.data?.buyer?.email || payload?.buyer?.email || 
+      payload?.email || "no-email@tix.africa";
+
+    const customerPhone = 
+      payload?.data?.customer?.phone || payload?.customer?.phone || 
+      payload?.data?.buyer?.phone || payload?.buyer?.phone || 
+      payload?.phone || "N/A";
+
+    const ticketName = 
+      payload?.data?.ticket?.name || payload?.ticket?.name || 
+      payload?.data?.ticket_type || payload?.ticket_type || "Tix Ticket";
+
+    const reference = 
+      payload?.data?.reference || payload?.reference || `TIX_${Date.now()}`;
+
+    // Push straight to Google Sheets as PAID since Tix only sends webhook for successful orders
+    await callSheet("appendRegistration", {
+      name: customerName,
+      email: customerEmail,
+      phone: customerPhone,
+      business: `[Tix] ${ticketName}`, // Using business field to capture the ticket package they bought!
+      reference,
+      status: "PAID",
+    });
+
+    return res.status(200).send("Tix webhook processed");
+  } catch (err) {
+    console.error("Tix Webhook Error:", err.message);
+    // Still return 200 so Tix doesn't keep retrying and spamming the backend
+    return res.status(200).send("Error processed");
+  }
+});
 
 // ─── Start ─────────────────────────────────────────────────────────────────────
 const PORT = process.env.PORT || 4000;

@@ -62,7 +62,9 @@ export default function HeroSection() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <a
-                 href="#register"
+                 href={siteConfig.tixLink}
+                 target="_blank"
+                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-base transition-all duration-200 hover:scale-105 hover:shadow-[0_8px_30px_hsl(43_80%_52%/0.4)] group"
                 style={{
                   background: "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)))",

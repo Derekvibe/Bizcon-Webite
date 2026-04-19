@@ -30,15 +30,47 @@ export const siteConfig = {
     { label: "Contact", href: "/contact" },
   ],
   pricing: {
-    regular: {
-      price: 15000,
-      label: "Regular",
+    bizzer: {
+      price: 16300,
+      label: "Bizzer",
       description: "Standard access to BIZCON 2026.",
+      perks: [
+        "Full-day access to all sessions BIZCON 2026",
+        "Resource Kit",
+        "Networking Opportunities",
+        "Certificate of Participation",
+        "Access to Alumni Community",
+      ],
     },
-    vip: {
-      price: 50000,
-      label: "VIP",
-      description: "Premium access with exclusive perks.",
+    besties: {
+      price: 54500,
+      label: "Bizzer Besties",
+      description: "Group ticket for you and your friends.",
+      perks: [
+        "Full-day access to all sessions BIZCON 2026",
+        "Resource Kit",
+        "Networking Opportunities",
+        "Certificate of Participation",
+        "Access to Alumni Community",
+      ],
+    },
+    plus: {
+      price: 48700,
+      label: "Bizzer Plus",
+      description: "Premium access with exclusive VIP perks.",
+      perks: [
+        "Full-day access to all sessions BIZCON 2026",
+        "Resource Kit",
+        "Networking Opportunities",
+        "Certificate of Participation",
+        "Access to Alumni Community",
+        "Priority Front-Row Seating",
+        "1-on-1 Strategy Session",
+        "Exclusive Speaker Access",
+        "VIP Networking Lunch",
+        "Premium Goodie Bag",
+      ],
     },
   },
+  tixLink: "https://tix.africa/discover/bizcon2026/checkout?step=tickets", // Updated actual Tix Link
 };
