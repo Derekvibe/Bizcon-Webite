@@ -47,9 +47,7 @@ const PricingSection = () => {
             </ul>
 
             <a
-              href={siteConfig.tixLink}
-              target="_blank"
-              rel="noreferrer"
+              href="#register"
               className="w-full text-center py-4 rounded-xl font-bold text-sm bg-white/10 text-white border border-white/20 transition-all duration-200 hover:bg-white/20 hover:border-white/40 block"
             >
               Get {siteConfig.pricing.bizzer.label} Ticket
@@ -84,9 +82,7 @@ const PricingSection = () => {
             </ul>
 
             <a
-              href={siteConfig.tixLink}
-              target="_blank"
-              rel="noreferrer"
+              href="#register"
               className="w-full text-center py-4 rounded-xl font-bold text-sm bg-gradient-to-r from-gold to-gold-light text-navy transition-all duration-200 hover:shadow-lg hover:shadow-gold/20 block"
             >
               Get {siteConfig.pricing.plus.label} Ticket
@@ -117,9 +113,7 @@ const PricingSection = () => {
             </ul>
 
             <a
-              href={siteConfig.tixLink}
-              target="_blank"
-              rel="noreferrer"
+              href="#register"
               className="w-full text-center py-4 rounded-xl font-bold text-sm bg-white/10 text-white border border-white/20 transition-all duration-200 hover:bg-white/20 hover:border-white/40 block"
             >
                Get {siteConfig.pricing.besties.label} Ticket

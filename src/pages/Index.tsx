@@ -9,6 +9,8 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import PartnersSection from "@/components/sections/PartnersSection";
 import CountdownSection from "@/components/sections/CountdownSection";
 import PricingSection from "@/components/sections/PricingSection";
+import RegistrationSection from "@/components/sections/RegistrationSection";
+
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -23,10 +25,12 @@ const Index = () => {
         <PartnersSection />
         <CountdownSection />
         <PricingSection />
+        <RegistrationSection />
       </main>
       <Footer />
     </div>
   );
 };
+
 
 export default Index;

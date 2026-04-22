@@ -43,16 +43,11 @@ export default function RegistrationSection() {
       const data = await res.json();
 
       if (data.ok) {
-        navigate("/payment", {
-          state: {
-            reference: data.reference,
-            name: form.name,
-            email: form.email,
-            phone: form.phone,
-            business: form.business,
-          },
-        });
+        // Redirect to Tix Africa for payment
+        window.location.href = siteConfig.tixLink;
       } else {
+
+
         setStatus("error");
       }
     } catch (err) {
