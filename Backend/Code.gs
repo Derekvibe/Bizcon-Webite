@@ -4,7 +4,7 @@
 
 const SHEET_NAME = "Registrations";
 const CONFIG_SHEET_NAME = "Config";
-const SHARED_SECRET = "REPLACE_WITH_A_LONG_RANDOM_TOKEN"; // Must match SHEETS_SECRET in .env
+const SHARED_SECRET = "bizcon_hub_2026_qX9zM4pR2v_secure_access"; // Must match SHEETS_SECRET in .env
 const TOTAL_SEATS = 250;
 
 // ─── Entry point ──────────────────────────────────────────────────────────────
@@ -30,6 +30,8 @@ function doPost(e) {
 
     // ── ACTION: Append new registration ──────────────────────────────────────
     if (action === "appendRegistration") {
+      const isPaid = (body.status === "PAID");
+      
       sheet.appendRow([
         new Date().toISOString(),
         body.name || "",
@@ -37,13 +39,22 @@ function doPost(e) {
         body.phone || "",
         body.business || "",
         body.reference || "",
-        "",         // package — filled on markPaid
-        "",         // amount  — filled on markPaid
+        body.pkg || "",         // New: capture package
+        body.amountNaira || "", // New: capture amount
         body.status || "PENDING",
-        ""          // paidAt
+        body.paidAt || (isPaid ? new Date().toISOString() : "") // New: capture paidAt
       ]);
+
+      // If it's already PAID (e.g. from Tix Webhook), decrement seats immediately
+      if (isPaid) {
+        const currentSeats = Number(configSheet.getRange("B1").getValue());
+        const newSeats = Math.max(0, currentSeats - 1);
+        configSheet.getRange("B1").setValue(newSeats);
+      }
+
       return respond({ ok: true });
     }
+
 
     // ── ACTION: Mark row as PAID + decrement seat count ───────────────────────
     if (action === "markPaid") {

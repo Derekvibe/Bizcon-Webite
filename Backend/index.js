@@ -198,15 +198,11 @@ app.get("/api/paystack/verify", async (req, res) => {
 
 // ─── ROUTE 4: Paystack Webhook ────────────────────────────────────────────────
 // Paystack will call this automatically when payment succeeds.
-// This is the most RELIABLE way to mark a payment as paid (runs even if user
-// closes their browser before reaching the success page).
-// Register this URL in your Paystack Dashboard → Settings → Webhooks
 app.post(
   "/api/paystack/webhook",
   express.raw({ type: "application/json" }),
   async (req, res) => {
     try {
-      // Verify the request actually came from Paystack
       const signature = req.headers["x-paystack-signature"];
       const hash = crypto
         .createHmac("sha512", process.env.PAYSTACK_SECRET_KEY)
@@ -227,23 +223,21 @@ app.post(
         });
       }
 
-      // Always return 200 to Paystack so they don't keep retrying
       return res.sendStatus(200);
     } catch (err) {
       console.error("Webhook error:", err.message);
-      return res.sendStatus(200); // Still return 200 to avoid retries
+      return res.sendStatus(200);
     }
   },
 );
+
 // ─── ROUTE 5: Tix Africa Webhook ────────────────────────────────────────────────
 // Tix Africa will call this when a ticket purchase is complete.
-// Add this URL (e.g., https://your-backend.com/api/tix/webhook) to your Tix Dashboard Webhook settings.
 app.post("/api/tix/webhook", async (req, res) => {
   try {
     const payload = req.body;
     console.log("Tix Webhook Received:", JSON.stringify(payload, null, 2));
 
-    // Robust extraction: Since Tix Africa payload isn't strictly public, we check common object paths
     const customerName = 
       payload?.data?.customer?.name || payload?.customer?.name || 
       payload?.data?.buyer?.name || payload?.buyer?.name || 
@@ -264,6 +258,10 @@ app.post("/api/tix/webhook", async (req, res) => {
       payload?.data?.ticket?.name || payload?.ticket?.name || 
       payload?.data?.ticket_type || payload?.ticket_type || "Tix Ticket";
 
+    const amount = 
+      payload?.data?.amount || payload?.amount || 
+      payload?.data?.total_paid || payload?.total_paid || 0;
+
     const reference = 
       payload?.data?.reference || payload?.reference || `TIX_${Date.now()}`;
 
@@ -272,15 +270,17 @@ app.post("/api/tix/webhook", async (req, res) => {
       name: customerName,
       email: customerEmail,
       phone: customerPhone,
-      business: `[Tix] ${ticketName}`, // Using business field to capture the ticket package they bought!
+      business: `[Tix] ${ticketName}`,
       reference,
+      pkg: ticketName,           // Explicitly send ticket name as package
+      amountNaira: amount,      // Explicitly send amount
       status: "PAID",
+      paidAt: new Date().toISOString()
     });
 
     return res.status(200).send("Tix webhook processed");
   } catch (err) {
     console.error("Tix Webhook Error:", err.message);
-    // Still return 200 so Tix doesn't keep retrying and spamming the backend
     return res.status(200).send("Error processed");
   }
 });
