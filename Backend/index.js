@@ -8,14 +8,23 @@ import "dotenv/config";
 const app = express();
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
-const allowedOrigins = [process.env.FRONTEND_URL, "http://localhost:5173", "http://localhost:3000"];
+const allowedOrigins = [
+  process.env.FRONTEND_URL?.replace(/\/$/, ""), // Remove trailing slash if present
+  "http://localhost:5173",
+  "http://localhost:3000"
+];
+
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests with no origin (like mobile apps or curl)
     if (!origin) return callback(null, true);
-    if (allowedOrigins.indexOf(origin) !== -1 || origin.startsWith("http://localhost:")) {
+    
+    const sanitizedOrigin = origin.replace(/\/$/, "");
+    const isAllowed = allowedOrigins.includes(sanitizedOrigin) || sanitizedOrigin.startsWith("http://localhost:");
+    
+    if (isAllowed) {
       callback(null, true);
     } else {
+      console.error(`CORS blocked for origin: ${origin}`);
       callback(new Error("Not allowed by CORS"));
     }
   }
