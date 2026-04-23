@@ -36,9 +36,9 @@ export default function PartnersSection({ compact = false }: PartnersSectionProp
   <div
     className="flex items-center gap-12 animate-[marquee_25s_linear_infinite]"
   >
-    {[...partners, ...partners].map((partner) => (
+    {[...partners, ...partners].map((partner, index) => (
       <div 
-        key={partner.id + "-logo"} 
+        key={`${partner.id}-${index}-logo`} 
         className="group flex-shrink-0"
       >
         {partner.website ? (

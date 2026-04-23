@@ -8,7 +8,18 @@ import "dotenv/config";
 const app = express();
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
-app.use(cors({ origin: process.env.FRONTEND_URL }));
+const allowedOrigins = [process.env.FRONTEND_URL, "http://localhost:5173", "http://localhost:3000"];
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1 || origin.startsWith("http://localhost:")) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  }
+}));
 app.use(express.json());
 
 // ─── Constants ────────────────────────────────────────────────────────────────
@@ -55,7 +66,7 @@ app.get("/api/seats", async (req, res) => {
 // Saves the user to Google Sheets with status=PENDING and returns a reference.
 app.post("/api/register", async (req, res) => {
   try {
-    const { name, email, phone, business } = req.body;
+    const { name, email, phone, business, pkg, amountNaira } = req.body;
 
     if (!name || !email || !phone) {
       return res
@@ -75,6 +86,8 @@ app.post("/api/register", async (req, res) => {
       phone,
       business: business || "",
       reference,
+      pkg: pkg || "",
+      amountNaira: amountNaira || 0,
       status: "PENDING",
     });
 
